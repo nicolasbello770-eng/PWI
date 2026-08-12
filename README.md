@@ -1,2 +1,2 @@
 # PW-I
-nicolas e yuri
+nicolas e pedro paz 
