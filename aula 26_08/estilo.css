@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #18002e, #32005c, #001f3f);
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+/* TÍTULO */
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 45px;
+    text-shadow: 3px 3px 8px black;
+}
+
+/* ORGANIZAÇÃO */
+
+.filmes {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* QUADRADO DO FILME */
+
+.filme {
+    padding: 30px;
+    border-radius: 30px;
+
+    text-align: center;
+
+    border: 4px solid white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+    transition: 0.3s;
+}
+
+/* IMAGEM */
+
+.filme img {
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+/* NOME DO FILME */
+
+.filme h2 {
+    color: white;
+    margin-top: 15px;
+    font-size: 21px;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* CORES DOS QUADRADOS */
+
+.filme1 {
+    background-color: #e63946;
+}
+
+.filme2 {
+    background-color: #f77f00;
+}
+
+.filme3 {
+    background-color: #6a4c93;
+}
+
+.filme4 {
+    background-color: #0077b6;
+}
+
+.filme5 {
+    background-color: #b5651d;
+}
+
+.filme6 {
+    background-color: #008c95;
+}
+
+.filme7 {
+    background-color: #7209b7;
+}
+
+.filme8 {
+    background-color: #c1121f;
+}
+
+.filme9 {
+    background-color: #2a9d8f;
+}
+
+/* EFEITO */
+
+.filme:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* CELULAR */
+
+@media (max-width: 750px) {
+
+    .filmes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .filmes {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+}
