@@ -1,89 +1,314 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmes Mais Assistidos</title>
+    <title>TechCell - Loja de Celulares</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
 <header>
-    <h1>🎬 Filmes Mais Assistidos</h1>
+    <div class="logo">📱 TechCell</div>
 
     <nav>
-        <a href="#">Início</a>
-        <a href="#">Filmes</a>
-        <a href="#">Categorias</a>
-        <a href="#">Contato</a>
+        <a href="#inicio">Início</a>
+        <a href="#celulares">Celulares</a>
+        <a href="#ofertas">Ofertas</a>
     </nav>
+
+    <button class="carrinho-btn" onclick="abrirCarrinho()">
+        🛒 Carrinho <span id="contador">0</span>
+    </button>
 </header>
 
 
-<main>
+<section class="banner" id="inicio">
 
-<h2>🍿 Os favoritos do público</h2>
+    <div>
+        <span>OFERTAS ESPECIAIS</span>
 
-<section class="cards">
+        <h1>
+            Seu próximo<br>
+            <strong>celular está aqui.</strong>
+        </h1>
 
-<article class="card">
-<img src="https://www.papeiseparede.com.br/7720-thickbox_default/papel-de-parede-mural-herois-vingadores.jpg.webp" alt="Vingadores">
-<h3>Vingadores</h3>
-<p>Um grupo de heróis se reúne para salvar o mundo.</p>
-<button class="botao">Ver filme</button>
-</article>
+        <p>
+            Smartphones novos, lacrados e prontos para uso.
+            Compre de forma rápida e segura.
+        </p>
 
+        <a href="#celulares" class="btn">
+            Comprar agora
+        </a>
+    </div>
 
-<article class="card">
-<img src="https://cloud.estacaonerd.com/wp-content/uploads/2021/12/20135303/DF-12080_rv2_2000x1125_thumbnail.jpg" alt="Homem Aranha">
-<h3>Homem-Aranha</h3>
-<p>Um jovem ganha poderes e decide combater o crime.</p>
-<button class="botao">Ver filme</button>
-</article>
-
-
-<article class="card">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiDHaSFVT2Vprmr76K_QeNOsVLAIWlp-KzrKYVr7ClvA&s=10" alt="Batman">
-<h3>Batman</h3>
-<p>Um herói enfrenta os perigos de Gotham City.</p>
-<button class="botao">Ver filme</button>
-</article>
-
-
-<article class="card">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlvIBRqRteSQiQQmnO_aVk-ryvEoi_IKUyWIf0ZR43Zw&s=10" alt="Jurassic Park">
-<h3>Jurassic Park</h3>
-<p>Dinossauros voltam à vida em um parque incrível.</p>
-<button class="botao">Ver filme</button>
-</article>
-
-
-<article class="card">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjfYAd93bAgW_MMhKoarPGY5D9MCCSmgClLRr6_h8gDA&s=10" alt="Avatar">
-<h3>Avatar</h3>
-<p>Uma aventura em um planeta cheio de criaturas fantásticas.</p>
-<button class="botao">Ver filme</button>
-</article>
-
-
-<article class="card">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAGq9r2_ca-cTyZP4DCiY0G9MiW34Jqi3LGauADp4ilQ&s=10" alt="Titanic">
-<h3>Titanic</h3>
-<p>Uma história de amor durante a viagem do famoso navio.</p>
-<button class="botao">Ver filme</button>
-</article>
-
+    <div class="celular-banner">
+        📱
+    </div>
 
 </section>
 
-</main>
+
+<section class="produtos" id="celulares">
+
+    <div class="titulo">
+        <span>CATÁLOGO</span>
+        <h2>Celulares em destaque</h2>
+        <p>Escolha seu aparelho e adicione ao carrinho.</p>
+    </div>
+
+    <div class="grid-produtos">
+
+
+        <div class="produto">
+
+            <div class="imagem-produto samsung">
+                📱
+            </div>
+
+            <span class="tag">OFERTA</span>
+
+            <h3>Samsung Galaxy S24</h3>
+
+            <p class="descricao">
+                256GB • 8GB RAM • 5G
+            </p>
+
+            <div class="preco">
+                <small>De R$ 4.499,00</small>
+                <strong>R$ 3.999,00</strong>
+            </div>
+
+            <button onclick="adicionarCarrinho('Samsung Galaxy S24', 3999)">
+                Adicionar ao carrinho
+            </button>
+
+        </div>
+
+
+        <div class="produto">
+
+            <div class="imagem-produto iphone">
+                📱
+            </div>
+
+            <span class="tag">MAIS VENDIDO</span>
+
+            <h3>iPhone 15</h3>
+
+            <p class="descricao">
+                128GB • 6GB RAM • 5G
+            </p>
+
+            <div class="preco">
+                <small>De R$ 4.999,00</small>
+                <strong>R$ 4.499,00</strong>
+            </div>
+
+            <button onclick="adicionarCarrinho('iPhone 15', 4499)">
+                Adicionar ao carrinho
+            </button>
+
+        </div>
+
+
+        <div class="produto">
+
+            <div class="imagem-produto xiaomi">
+                📱
+            </div>
+
+            <span class="tag">OFERTA</span>
+
+            <h3>Redmi Note 13</h3>
+
+            <p class="descricao">
+                256GB • 8GB RAM • 5G
+            </p>
+
+            <div class="preco">
+                <small>De R$ 1.799,00</small>
+                <strong>R$ 1.499,00</strong>
+            </div>
+
+            <button onclick="adicionarCarrinho('Redmi Note 13', 1499)">
+                Adicionar ao carrinho
+            </button>
+
+        </div>
+
+
+        <div class="produto">
+
+            <div class="imagem-produto motorola">
+                📱
+            </div>
+
+            <span class="tag">OFERTA</span>
+
+            <h3>Motorola Edge 50</h3>
+
+            <p class="descricao">
+                256GB • 12GB RAM • 5G
+            </p>
+
+            <div class="preco">
+                <small>De R$ 2.899,00</small>
+                <strong>R$ 2.499,00</strong>
+            </div>
+
+            <button onclick="adicionarCarrinho('Motorola Edge 50', 2499)">
+                Adicionar ao carrinho
+            </button>
+
+        </div>
+
+
+        <div class="produto">
+
+            <div class="imagem-produto poco">
+                📱
+            </div>
+
+            <span class="tag">NOVO</span>
+
+            <h3>POCO X6 Pro</h3>
+
+            <p class="descricao">
+                512GB • 12GB RAM • 5G
+            </p>
+
+            <div class="preco">
+                <small>De R$ 2.699,00</small>
+                <strong>R$ 2.299,00</strong>
+            </div>
+
+            <button onclick="adicionarCarrinho('POCO X6 Pro', 2299)">
+                Adicionar ao carrinho
+            </button>
+
+        </div>
+
+
+        <div class="produto">
+
+            <div class="imagem-produto samsung">
+                📱
+            </div>
+
+            <span class="tag">OFERTA</span>
+
+            <h3>Galaxy A55</h3>
+
+            <p class="descricao">
+                256GB • 8GB RAM • 5G
+            </p>
+
+            <div class="preco">
+                <small>De R$ 2.299,00</small>
+                <strong>R$ 1.999,00</strong>
+            </div>
+
+            <button onclick="adicionarCarrinho('Galaxy A55', 1999)">
+                Adicionar ao carrinho
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="vantagens" id="ofertas">
+
+    <div>
+        🚚
+        <h3>Entrega rápida</h3>
+        <p>Enviamos seu pedido com segurança.</p>
+    </div>
+
+    <div>
+        🔒
+        <h3>Compra segura</h3>
+        <p>Seus dados ficam protegidos.</p>
+    </div>
+
+    <div>
+        📦
+        <h3>Produto lacrado</h3>
+        <p>Celulares novos e prontos para uso.</p>
+    </div>
+
+    <div>
+        💳
+        <h3>Pagamento fácil</h3>
+        <p>Escolha a melhor forma de pagamento.</p>
+    </div>
+
+</section>
 
 
 <footer>
-<p>🎥 Filmes Mais Assistidos - 2026</p>
+
+    <h2>📱 TechCell</h2>
+
+    <p>
+        Celulares novos com qualidade e preço justo.
+    </p>
+
+    <p class="copyright">
+        © 2026 TechCell
+    </p>
+
 </footer>
 
+
+<!-- CARRINHO -->
+
+<div id="fundoCarrinho" class="fundo" onclick="fecharCarrinho()"></div>
+
+<div id="carrinho" class="carrinho">
+
+    <div class="topo-carrinho">
+
+        <h2>🛒 Seu carrinho</h2>
+
+        <button onclick="fecharCarrinho()">✕</button>
+
+    </div>
+
+
+    <div id="listaCarrinho">
+
+        <p class="vazio">
+            Seu carrinho está vazio.
+        </p>
+
+    </div>
+
+
+    <div class="total">
+
+        <span>Total:</span>
+
+        <strong id="total">
+            R$ 0,00
+        </strong>
+
+    </div>
+
+
+    <button class="finalizar" onclick="finalizarCompra()">
+        Finalizar compra
+    </button>
+
+</div>
+
+
+<script src="variaveis.js"></script>
 
 </body>
 </html>
